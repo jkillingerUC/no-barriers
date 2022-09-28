@@ -7,7 +7,7 @@ const Page = () => {
       <h1>Index Page</h1>
       <p>
         This is an example template for helping you to learn how to build a site
-        powered by Gatsby
+        powered by Gatsby. No way this changes live. Nevermind.
       </p>
       <Link to="/about">About</Link>
     </main>

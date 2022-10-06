@@ -2,6 +2,8 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Header from '../components/nbheader'
 import Footer from '../components/nbfooter'
+import Testimonial from '../components/nbtestimonial'
+import Section from '../components/nbsection'
 
 const Page = ({ data }) => {
     return (
@@ -15,8 +17,21 @@ const Page = ({ data }) => {
           This is an example template for helping you to learn how to build a site
           powered by Gatsby. 
         </p>
+
+        <Section 
+          title={data.contentfulNbSection.title}
+        
+        />
+
+        <Testimonial 
+          quote={data.contentfulNbTestimonial.quote} 
+          name={data.contentfulNbTestimonial.name}
+        />
+
         <Link to="/about">About</Link>
-        <Footer address={'123 Jeff lane'} />
+        <Footer 
+          address={data.contentfulNbFooter.address} 
+        />
       </main>
     );
   // }
@@ -25,7 +40,7 @@ const Page = ({ data }) => {
 export default Page;
 
 export const data = graphql`
-query headQuery {
+query MyQuery {
   contentfulNbHeader {
     title
     logo {
@@ -36,5 +51,18 @@ query headQuery {
         contentType
       }
     }
+  }
+  contentfulNbFooter {
+    address
+  }
+  contentfulNbTestimonial {
+    name
+    quote {
+      quote
+      id
+    }
+  }
+  contentfulNbSection {
+    title
   }
 }`

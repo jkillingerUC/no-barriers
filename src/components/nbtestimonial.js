@@ -1,11 +1,14 @@
 import React from 'react'
-// import { GatsbyImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import * as styles from './nbtestimonial.module.css'
 
 
-const Testimonial = ({ quote, name }) => {
+const Testimonial = ({ image, quote, name }) => {
+    const photo = getImage(image)
+
     return (
         <div>
+            <GatsbyImage image={photo} />
             <p className={styles.font}>{quote.quote}</p>
             <p>{name}</p>
         </div>

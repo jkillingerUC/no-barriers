@@ -13,9 +13,14 @@ const Page = ({ data }) => {
           logo={data.contentfulNbHeader.logo}
         />
         <Section 
+          image={data.contentfulNbSection.image}
           title={data.contentfulNbSection.title}
+          subtitle={data.contentfulNbSection.subtitle}
+          description={data.contentfulNbSection.description}
+          callToAction={data.contentfulNbSection.callToAction}
         />
         <Testimonial 
+          image={data.contentfulNbTestimonial.image}
           quote={data.contentfulNbTestimonial.quote} 
           name={data.contentfulNbTestimonial.name}
         />
@@ -54,8 +59,23 @@ query MyQuery {
       quote
       id
     }
+    image {
+      gatsbyImageData
+      id
+      title
+    }
   }
   contentfulNbSection {
     title
+    subtitle
+    callToAction
+    description {
+      raw
+    }
+    image {
+      gatsbyImageData
+      id
+      title
+    }
   }
 }`

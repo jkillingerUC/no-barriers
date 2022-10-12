@@ -9,7 +9,7 @@ const Section = ({ image, title, subtitle, description, callToAction }) => {
     const photo = getImage(image)
 
     return (
-        <div>
+        <div className={styles.section}>
             {image && (
                 <GatsbyImage image={photo} />
             )}

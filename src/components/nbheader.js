@@ -7,7 +7,7 @@ const Header = ({ title, logo }) => {
     const image = getImage(logo)
     
     return (
-        <div>
+        <div className={styles.header}>
             <h1 className={styles.font}>{title}</h1>
             <GatsbyImage image={image} />
         </div>

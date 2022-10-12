@@ -6,9 +6,9 @@ const Footer = ({ copyright, address }) => {
     const image = getImage(copyright)
     
     return (
-        <div>
+        <div className={styles.footer}>
             <GatsbyImage image={image} />
-            <p className={styles.bluey}>{address}</p>
+            <p className={styles.font}>{address}</p>
         </div>
     )
 }

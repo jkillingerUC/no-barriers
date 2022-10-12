@@ -7,7 +7,7 @@ const Testimonial = ({ image, quote, name }) => {
     const photo = getImage(image)
 
     return (
-        <div>
+        <div className={styles.testimonial}>
             <GatsbyImage image={photo} />
             <p className={styles.font}>{quote.quote}</p>
             <p>{name}</p>

@@ -3,17 +3,28 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import * as styles from './nbtestimonial.module.css'
 
 
-const Testimonial = ({ image, quote, name }) => {
-    const photo = getImage(image)
+const Testimonial = ({ testimonialPosts }) => {
+    //const photo = getImage(image)
+    //console.log(posts);
 
     return (
-        <div className={styles.testimonial}>
-            <GatsbyImage image={photo} />
-            <p className={styles.font}>{quote.quote}</p>
-            <p>{name}</p>
-        </div>
+        
 
-    )
+        <div>
+                  
+      
+             {testimonialPosts.map(post => (
+              
+              <div key={post.id}>
+      
+              <p>{post.name}</p>
+              
+              </div>
+              
+              ))}
+          
+          
+          </div>)
 }
 
 export default Testimonial

@@ -5,39 +5,31 @@ import Footer from '../components/nbfooter'
 import Testimonial from '../components/nbtestimonial'
 import Section from '../components/nbsection'
 
-const Page = ({ data }) => {
+const Page = ({data}) => {
+
+ const sectionPosts = data.allContentfulNbSection.nodes;
+ const testimonialPosts = data.allContentfulNbTestimonial.nodes;
+
     return (
       <main>
-        <Header 
-          title={data.contentfulNbHeader.title} 
-          logo={data.contentfulNbHeader.logo}
-        />
+        
         <Section 
-          image={data.contentfulNbSection.image}
-          title={data.contentfulNbSection.title}
-          subtitle={data.contentfulNbSection.subtitle}
-          description={data.contentfulNbSection.description}
-          callToAction={data.contentfulNbSection.callToAction}
+          sectionPosts={sectionPosts}
         />
         <Testimonial 
-          image={data.contentfulNbTestimonial.image}
-          quote={data.contentfulNbTestimonial.quote} 
-          name={data.contentfulNbTestimonial.name}
-        />
-        <Footer 
-          address={data.contentfulNbFooter.address} 
-          copyright={data.contentfulNbFooter.copyright}
+          testimonialPosts={testimonialPosts}
         />
       </main>
     );
-  // }
 };
 
 export default Page;
 
 export const data = graphql`
 query MyQuery {
-  contentfulNbHeader {
+
+  allContentfulNbHeader {
+    nodes{
     title
     logo {
       gatsbyImageData
@@ -45,7 +37,9 @@ query MyQuery {
       title
     }
   }
-  contentfulNbFooter {
+}
+  allContentfulNbFooter {
+    nodes{
     address
     copyright {
       gatsbyImageData
@@ -53,7 +47,9 @@ query MyQuery {
       title
     }
   }
-  contentfulNbTestimonial {
+}
+  allContentfulNbTestimonial {
+    nodes {
     name
     quote {
       quote
@@ -65,17 +61,21 @@ query MyQuery {
       title
     }
   }
-  contentfulNbSection {
-    title
-    subtitle
-    callToAction
-    description {
-      raw
-    }
-    image {
-      gatsbyImageData
-      id
+}
+ 
+  allContentfulNbSection {
+    nodes{
       title
-    }
+      subtitle
+      callToAction
+      description {
+        raw
+      }
+      image {
+        gatsbyImageData
+        id
+        title
+      }
+    } 
   }
 }`

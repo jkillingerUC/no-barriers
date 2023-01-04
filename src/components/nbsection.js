@@ -1,46 +1,33 @@
 import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
-import * as styles from './nbsection.module.css'
 
-
-
-const Section = ({ sectionPosts }) => {
-   // const photo = getImage(image)
-   //console.log(posts);
+const Section = ({ sectionPosts }) => { 
+      const { title, subtitle, image, description, callToAction } = sectionPosts;
+      const photo = getImage(image) 
+      console.log(sectionPosts)
 
     return (
-        
-
-      <div>
-                
-    
-           {sectionPosts.map(post => (
-            
-            <div key={post.id}>
-    
-            <p>{post.title}</p>
-            
+        <div> 
+            {image && (
+                <GatsbyImage image={photo} />
+            )}
+            <div class="container">
+              <div>
+                <h1>{title}</h1>
+                {subtitle && (
+                  <h3>{subtitle}</h3>
+                )}
+                <p>{renderRichText(description)}</p>
+              </div>
             </div>
-            
-            ))}
-        
-        
-        </div>)
-        // <div className={styles.section}>
-        //     {image && (
-        //         <GatsbyImage image={photo} />
-        //     )}
-        //     <h2 className={styles.font}>{title}</h2>
-        //     {subtitle && (
-        //         <h3>{subtitle}</h3>
-        //     )}
-        //     <p>{renderRichText(description)}</p>
-        //     {callToAction && (
-        //         <p>{callToAction}</p>
-        //     )}
-        // </div>
 
+
+
+            {callToAction && (
+                <p>{callToAction}</p>
+            )}
+        </div>)
 
 }
 

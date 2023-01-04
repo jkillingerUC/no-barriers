@@ -14,6 +14,7 @@ const Page = ({ data }) => {
 
     return (
       <main>
+
         <div id="feature1" class="profile">
           <Section sectionPosts={sectionPosts[6]} />
         </div>
@@ -89,4 +90,12 @@ query MyQuery {
       }
     } 
   }
+
+  contentfulNbHeader {
+    logo {
+      gatsbyImageData
+    }
+    title
+  }
+
 }`

@@ -1,0 +1,642 @@
+body {
+	background-color: white;
+	font-size: 14px;
+	font-family: 'ProximaNova-Regular';
+}
+.container {
+	position: relative;
+}
+
+a {
+
+
+}
+
+hr {
+
+	width:95%;
+
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    color:#767676;
+    z-index: 1000;
+    max-height: 107px;
+    overflow: hidden;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    transition: height 0.3s;
+    line-height:75px;
+    opacity: .8;
+    box-shadow: 0 0 25px #000;
+
+}
+
+.header .container {
+	padding-left: 0;
+
+}
+
+.header.shrink {
+    height: 50px;
+    line-height:40px;
+
+}
+
+#logo img {
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.shrink #logo img {
+	height: auto; 
+	width: 60%;
+	padding: .5em; 
+}
+
+#primary {
+	overflow: auto;
+	float: right;
+	text-align: right;
+	width:  100%;
+}
+.shrink #primary {
+	height: 40px; 
+}
+#primary li {
+	display: inline;
+	list-style-type: none;
+	padding: 0% 0 0% 5%;
+	text-transform: uppercase;
+	-webkit-transition: ease-in-out .25s;
+	-moz-transition: ease-in-out .25s;
+	-ms-transition: ease-in-out .25s;
+	-o-transition: ease-in-out .25s;
+	transition: ease-in-out .25s;
+}
+
+#primary li>a {
+	color: #700000;
+	padding-bottom: 1%;
+	margin: 4% 0;
+	font-size: 1.5rem;
+	border-bottom: 3px solid #700000;
+	padding-bottom: 2px;
+}
+
+#primary li>a:hover {
+	text-decoration: none;
+	border-bottom: 3px solid #3a7676;
+	color: #3a7676;
+}
+
+/* the profiles features */
+
+#feature1 {
+margin-top: 0;
+}
+
+.profile {
+	width: 100%;
+	max-width: 1896px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.profile img {
+	width: 100%; 
+	height: auto;
+}
+
+.profile .quote {
+	position: absolute;
+	top: 20%;
+}
+.profile .statement {
+	position: absolute;
+	left: 0;
+	bottom: 2.5em;
+}
+
+.statement h1 {
+	font-size: 4em;
+	font-family: 'ProximaNova-Bold';
+	text-transform: uppercase;
+	padding: 0;
+	/* margin: 0; */
+	line-height: 50%;
+	text-shadow: 0px 0px 20px #666;
+	color: #f8f8d8;
+}
+
+#feature2 .statement {
+	color: #fff;
+	/* bottom: .5em; */
+	
+	background-color: rgba(0,0,0,.35);
+	text-align: left;
+}
+#feature2 .statement h1, #feature3 .statement h1 {
+	font-size: 1.65em;
+	text-shadow: none;
+}
+#feature2 .statement h1 {
+	color: #96CECE;
+}
+#feature3 .statement h1{
+	color: #e4ae48;
+}
+
+
+#feature2 + .container.points h3, #feature3 + .container.points h3{
+	color: #e4ae48;
+	font-family: 'ProximaNova-Bold';
+}
+.statement h3 {
+	font-family: 'ProximaNova-Bold';
+	text-shadow: none;
+
+}
+
+#feature1 .statement h3{
+	color: #96CECE;
+}
+
+#feature2 .statement h3{
+	color: #fff;
+}
+
+.statement {
+	font-size: 1.4em;
+	font-family: 'ProximaNovaT-Thin';
+	color: #fff;
+	padding: 1em;
+	text-align: right;
+}
+
+#feature1 .statement, #feature3 .statement{
+	background-color: rgba(0,0,0,.25);
+	
+}
+
+#feature2 + .container.points, #feature3 + .container.points {
+	text-align: center; 
+}
+#feature2 + .container.points h3, #feature3 + .container.points h3{
+	font-size: 300%;
+}
+#feature2 + .container.points p, #feature3 + .container.points p{
+	font-size: 140%
+}
+
+#feature2 + .container.points h3 {
+	color: #3a7676;
+}
+#feature2.profile, #feature3.profile {
+	overflow:hidden;
+}
+
+.empower {
+	counter-reset: my-badass-counter;
+	padding-left: 2em;
+	padding-top: 2em;
+}
+.empower dt:before {
+	content: counter(my-badass-counter);
+	counter-increment: my-badass-counter;
+	font-size: 2em;
+	display: inline;
+	border: 3px solid #3a7676;
+	border-radius:5em;
+	position: absolute;
+	padding: .25em .65em;
+	width: 2em;
+	height: 2em;
+	background-color: #efefef;
+	color: #3a7676;
+	margin-left: -1.25em;
+}
+.empower dt > p {
+	margin-left: 2em;
+	display: inline-block;
+}
+
+
+.highlight-container {
+	width: 100%;
+	max-width: 1896px;
+	margin: 0 auto;
+	height: auto;
+	padding: 4em;
+	position: relative;
+	overflow: hidden;
+}
+#hc1 {
+	background-color: #8f3931;
+}
+#hc2 {
+	background-color: #3a7676;
+}
+#hc3 {
+	background-color: #e4ae4b;
+}
+
+.highlight-container h2 {
+	font-size: 4em;
+	text-transform: uppercase;
+	font-family: 'ProximaNova-Bold';
+	color: white;
+	text-align: center;
+}
+.highlight-container h4{
+	font-family: 'ProximaNova-Regular';
+	font-size: 1.75em;
+	color: white;
+}
+.highlight-container p {
+	font-family: 'ProximaNovaT-Thin';
+	font-size: 1.25em;
+	color: white;
+}
+#hc1 h3 {
+	color: #8f3931;
+}
+.container.points {
+	padding: 2em 0;
+	position: relative;
+
+}
+
+.container.points.news, .container.points .difference {
+	padding-top: 0em;
+}
+#feature1 #cobb {
+	position: absolute;
+	right: 05%;
+	top: 105%;
+	opacity: .5;
+	width: 28%;
+}
+
+#hc2 .circles{
+	position: absolute;
+}
+
+#highlight2.container img#cir1{
+	right: 0%;
+	top: 0%;
+	width: 250px;
+}
+
+#highlight2.container img#cir2{
+	left: 0%;
+	top: -10%;
+	width: 160px;
+}
+#highlight2.container img#cir3{
+	left: 40%;
+	top: 20%;
+	width: 200px;
+}
+
+.container.points h2 {
+	font-size: 1.7em;
+	color: #666;
+	font-family: 'ProximaNova-Bold';
+}
+.container.points h3{
+	
+	font-size: 1.5em;
+	font-family: 'ProximaNovaT-Thin';
+	color: #767676;
+	line-height: 200%;
+	margin: 0;
+	padding: 0;
+}
+.container.points .col-lg-12{
+
+	padding: 3em 0;
+}
+.container.points a{
+	font-family: 'ProximaNova-Regular';
+	color: #567ea0;
+	text-decoration: none
+}
+.container.points p {
+	font-size: 1.25em;
+	line-height: 160%;
+	color: #767676;
+	font-family: 'ProximaNovaT-Thin'
+}
+#hc2 + .container.points h3{
+	color: #3a7676;
+}
+#hc3 + .container.points h3{
+	color: #e4ae4b;
+}
+.quote {
+	color: white;
+	font-size: 3em;
+	font-family: 'ProximaNova-Bold';
+}
+.ss-quote::before {
+	margin-left: -1em;
+}
+
+#highlight1.container img, #highlight2.container img, #highlight3.container img  {
+	width: 100%;
+	height: auto;
+}
+
+#highlight1.container .ss-quote, #highlight2.container .ss-quote, #highlight3.container .ss-quote{
+	font-size: 2em;
+}
+#highlight1.container .ss-quote, #highlight3.container .ss-quote, #highlight1.container .student, #highlight3.container .student {
+	text-align: right;
+}
+
+.student strong {
+	font-family: 'ProximaNova-Bold';
+}
+
+.ss-quote:before {
+	margin-right: .5em;
+}
+
+.quote span{
+	display: block;
+	font-size: .65em;
+	font-family: 'ProximaNovaT-Thin'
+}
+
+/* styling for the moving icons */
+.icon {
+	margin: 0 auto;
+	display: block;
+}
+
+.col-lg-5 {
+	position: relative;
+}
+
+#brick1 {
+	width:20%;
+	height: auto;
+	position: absolute;
+}
+
+/* style for the moving quotes */
+.quote > p > span {
+opacity: .35;
+}
+
+.bar {
+	position: absolute;
+	width: 500px;
+	height: 6px;
+	background-color: #fff;
+	opacity: .1;
+	
+}
+#bar1 {
+	left: 0;
+	top: 35px;
+}
+#bar2{
+	left: 200px;
+	top: 20px;
+}
+#bar3{
+	left: 100px;
+	top: 110px;
+}
+#bar4{
+	left: 0;
+	top: 210px;
+}
+#bar5 {
+	right: 400px;
+	top: 250px;
+}
+#bar6{
+	right: 200px;
+	top: 85px;
+}
+#bar7{
+	right: 100px;
+	top: 160px;
+}
+#bar8{
+	right: 0;
+	top: 280px;
+}
+
+#bar9 {
+	left: 15px;
+	top: 70px;
+}
+#bar10{
+	left: 65px;
+	top: 95px;
+}
+#bar11{
+	left: 100px;
+	top: 175px;
+}
+#bar12{
+	left: 0;
+	top: 235px;
+}
+#bar13{
+	right: 135px;
+	top: 145px;
+}
+#bar14{
+	right: 35px;
+	top: 265px;
+}
+#bar15 {
+	right: 35px;
+	top: 310px;
+}
+#bar16{
+	right: 235px;
+	top: 120px;
+}
+
+.loanfree{
+	background-color: #e8f1f1;
+	padding: 1em 2.5em
+}
+.difference {
+	padding-top: 1em;
+}
+
+.highlight-container.footer {
+	padding: 1em 0;
+}
+.highlight-container.footer p {
+	font-size: .875em;
+	line-height: 150%;
+	margin-top: 1em;
+}
+.footer {
+	background-color: #565656;
+}
+
+.shield{
+	background: url(http://collegeadmissions.uchicago.edu/sites/all/themes/plaisance/i/template/sprite_v2.svg) 0 0 no-repeat;
+	background-size: 100%;
+	text-indent: -9999px;
+	height: 45px;
+	width: 220px;
+	color: white;
+}
+
+.footer a {
+	color: white;
+}
+strong {
+	font-family: 'ProximaNova-Regular';
+}
+
+/* responsive styles */
+
+@media (max-width: 1200px) {
+  .statement {
+    font-size: 1.175em;
+  }
+  .statement h1 {
+  	font-size: 2.75em;
+  }
+  .profile .statement, #feature2 .statement {
+	  bottom: 2em;
+  }
+}
+
+/* styles for smaller screen */
+@media all and (max-width: 991px){
+	
+	#feature1 .statement h1 {
+		font-size: 2.5em;
+	
+	}
+	
+}
+
+
+/* styles for devices */
+@media all and (max-width: 767px){
+	#highlight1.container .ss-quote, 
+	#highlight1.container .student, 
+	#highlight2.container .ss-quote, 
+	#highlight2.container .student,
+	#highlight3.container .student,
+	#highlight3.container .ss-quote
+	{
+		font-size: 150%;
+		text-align: center; 
+	}
+	#feature1 .container .col-xs-8, #feature2 .container .col-xs-8, #feature3 .container .col-xs-8{
+		font-size: 100%;
+		position: relative;
+		
+	}
+	#feature1 .statement h1, #feature2 .statement h1, #feature3 .statement h1{
+		text-shadow: none;
+		padding-top: 1em;
+	}
+	#feature1 .statement h1 {
+		color: #8f3931;
+		
+	}
+	#feature2 .statement h1 {
+		color: #ccc; 
+		padding-top: 1em; 
+	}
+	
+	#feature1 .statement h3 {
+		color: #666;
+	}
+
+	#feature2 .statement h3{
+	color: #666;
+	}
+
+	
+	#feature1 .col-xs-12, #feature2 .col-xs-12, #feature3 .col-xs-12{
+		position: relative;
+		padding-bottom: 2em;
+		margin: 0;
+		width: 100%;
+		background-color: rgba(0,0,0,0);
+		text-align: left;
+		color: #666;
+		border-bottom: 1px solid #ccc;
+		display: block;
+	}
+}
+
+@media all and (min-width: 321px) and (max-width: 480px){
+	
+	#highlight1.container img, #highlight2.container img, #highlight3.container img {
+		height: 150px;
+		width: auto;
+	}
+
+	.container.points h3{
+
+	line-height: 100%;
+	margin: 0 0 20px 0;
+	}
+
+	.statement h1 {
+	line-height: 100%;	
+	}	
+
+
+}
+
+
+
+/* styles for iphone */
+@media all and (max-width: 320px){
+	.header img{
+		width: 100%;
+	}
+	#feature1 {
+		margin-top: 75px;
+	}
+	.highlight-container {
+	margin: 0;
+	padding: 2em 0;
+	}
+	
+	.container.points {
+	padding: 0
+	}
+
+
+	#feature1 h1, #feature1 h3, #feature2 h1, #feature2 h3, #feature3 h1, #feature3 h3 {
+		margin-top: 0;
+	}
+	#feature1 .container .col-xs-12, #feature2 .container .col-xs-12, #feature3 .container .col-xs-12 {
+		font-size: 110%;
+	
+	}
+	#feature1 + .container.points h3, #feature2 + .container.points h3, #feature3 + .container.points h3 {
+	line-height: 110%;
+		margin-bottom: .5em;
+	}
+	#feature1 .container .col-xs-12 h1, #feature2 .container .col-xs-12 h1, #feature3 .container .col-xs-12 h1{
+		line-height: 100%;
+	}
+
+
+}

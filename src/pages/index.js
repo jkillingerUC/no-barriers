@@ -19,7 +19,12 @@ const Page = ({ data }) => {
           <Section sectionPosts={sectionPosts[6]} />
         </div>
 
-        <SectionRow sectionPosts={sectionPosts} />
+        <div class="container points">
+          <div class="col-md-3 col-lg-3">
+            <SectionRow sectionPosts={sectionPosts} />
+          </div>
+        </div>
+        
 
         <FirstTestimonial testimonialPosts={testimonialPosts}/>
 

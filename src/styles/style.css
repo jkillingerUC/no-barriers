@@ -1,4 +1,4 @@
-/* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
+A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack
 body {font: 13px Helmet, Freesans, sans-serif;}
 
 /* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
@@ -29,6 +29,7 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 
 body {
 	font-family: 'ProximaNova-Regular', Helvetica, Arial, sans-serif;
+	font-size: 14px;
 }
 
 .container {
@@ -134,7 +135,18 @@ margin-top: 0px;
 	bottom: 5.5em;
 }
 
-.statement h1 {
+#feature1 .statement {
+	background-color: rgba(0,0,0,.25);
+	position: absolute;
+	bottom: 2.5em;
+	font-size: 1.4em;
+    font-family: 'ProximaNovaT-Thin';
+    color: #fff;
+    padding: 1em;
+    text-align: right;
+}
+
+#feature1 .statement h2{
 	font-size: 4em;
 	font-family: 'ProximaNova-Bold';
 	text-transform: uppercase;
@@ -142,7 +154,18 @@ margin-top: 0px;
 	margin: 0;
 	line-height: 50%;
 	text-shadow: 0px 0px 60px #000;
+	color: #f8f8d8;
 }
+
+#feature1 .statement h3 {
+	color: #96CECE;
+	font-family: 'ProximaNova-Bold';
+    text-shadow: none;
+	font-size: 24px;
+	margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 
 #feature2 .statement {
 	color: #333;
@@ -248,10 +271,7 @@ margin-top: 0px;
 #hc1 h3 {
 	color: #8f3931;
 }
-.container.points {
-	padding: 2em 0;
-	position: relative;
-}
+
 
 
 #hc2 .circles{
@@ -275,10 +295,19 @@ margin-top: 0px;
 	width: 200px;
 }
 
+.info-row.statement {
+	font-size: 1em;
+}
+
+.container.points {
+	padding: 2em 0;
+	position: relative;
+}
+
 .container.points h2 {
-	font-size: 1.85em;
-	color: #8f3931;
-	font-family: 'ProximaNova-Bold';
+	font-size: 1.7em;
+    color: #666;
+    font-family: 'ProximaNova-Bold';
 }
 .container.points h3{
 	
@@ -297,6 +326,7 @@ margin-top: 0px;
 	font-family: 'ProximaNova-Bold';
 }
 .container.points p {
+	margin: 0 0 10px;
 	font-size: 1.25em;
 	line-height: 160%;
 	color: #767676;

@@ -124,16 +124,16 @@ margin-top: 0;
 	bottom: 2.5em;
 }
 
-.statement h1 {
+/* .statement h1 {
 	font-size: 4em;
 	font-family: 'ProximaNova-Bold';
 	text-transform: uppercase;
 	padding: 0;
 	/* margin: 0; */
-	line-height: 50%;
+	/* line-height: 50%;
 	text-shadow: 0px 0px 20px #666;
-	color: #f8f8d8;
-}
+	color: #f8f8d8; */
+/* } */ 
 
 #feature2 .statement {
 	color: #fff;
@@ -164,8 +164,27 @@ margin-top: 0;
 
 }
 
-#feature1 .statement h3{
+#feature1 h2 {
+	font-size: 4em;
+	font-family: 'ProximaNova-Bold';
+	text-transform: uppercase;
+	padding: 0;
+	/* margin: 0; */
+	line-height: 50%;
+	text-shadow: 0px 0px 20px #666;
+	color: #f8f8d8;
+}
+
+#feature1 h3 {
 	color: #96CECE;
+}
+
+#feature1 p {
+	margin: 0 0 10px;
+	font-size: 1.4em;
+	font-family: "ProximaNovaT-Thin";
+	color: #fff;
+	text-align: right;
 }
 
 #feature2 .statement h3{

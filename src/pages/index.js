@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-// import Header from '../components/nbheader'
-// import Footer from '../components/nbfooter'
+import Header from '../components/nbheader'
+import Footer from '../components/nbfooter'
 import Testimonial from '../components/nbtestimonial'
 import FirstTestimonial from '../components/nbfirsttestimonial'
 import Section from '../components/nbsection'
@@ -15,8 +15,10 @@ const Page = ({ data }) => {
     return (
       <main>
 
+        <Header />
+
         <div id="feature1" class="profile">
-          <Section sectionPosts={sectionPosts[6]} />
+          <Section sectionPosts={sectionPosts[8]} />
         </div>
 
         <div class="container points">
@@ -29,10 +31,12 @@ const Page = ({ data }) => {
         <FirstTestimonial testimonialPosts={testimonialPosts}/>
 
         <div id="feature2" class="profile">
-          <Section sectionPosts={sectionPosts[4]} />
+          <Section sectionPosts={sectionPosts[2]} />
         </div> 
 
-        <Section sectionPosts={sectionPosts[8]} />
+        <div class="container points">
+          <Section sectionPosts={sectionPosts[1]} />
+        </div>
 
         <div id="hc2" class="highlight-container">
           <div id="highlight2" class="container">
@@ -44,10 +48,13 @@ const Page = ({ data }) => {
         </div>
 
         <div id="feature3" class="profile">
-          <Section sectionPosts={sectionPosts[5]} />
+          <Section sectionPosts={sectionPosts[7]} />
         </div> 
 
-        <Section sectionPosts={sectionPosts[7]} />
+        <div class="container points">
+          <Section sectionPosts={sectionPosts[0]} />
+        </div>
+        
         
         <div id="hc3" class="highlight-container">
           <div id="highlight3" class="container">
@@ -56,6 +63,9 @@ const Page = ({ data }) => {
             />
           </div>
         </div>
+
+        <Footer />
+
       </main>
     );
 };
@@ -95,12 +105,4 @@ query MyQuery {
       }
     } 
   }
-
-  contentfulNbHeader {
-    logo {
-      gatsbyImageData
-    }
-    title
-  }
-
 }`

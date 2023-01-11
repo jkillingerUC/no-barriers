@@ -5,16 +5,15 @@ import { renderRichText } from 'gatsby-source-contentful/rich-text'
 const Section = ({ sectionPosts }) => { 
       const { title, subtitle, image, description, callToAction } = sectionPosts;
       const photo = getImage(image) 
-      console.log(sectionPosts)
 
     return (
         <div> 
             {image && (
                 <GatsbyImage image={photo} />
             )}
-            <div class="container">
+            <div class="container statement">
               <div>
-                <h1>{title}</h1>
+                <h2>{title}</h2>
                 {subtitle && (
                   <h3>{subtitle}</h3>
                 )}

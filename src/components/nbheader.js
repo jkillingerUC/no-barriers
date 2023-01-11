@@ -6,7 +6,7 @@ const Header = ({ title, logo }) => {
     
     return (
         <div>
-            <h1>{title}</h1>
+            <h2>{title}</h2>
             <GatsbyImage image={image} />
         </div>
 

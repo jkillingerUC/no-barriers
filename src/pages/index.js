@@ -22,25 +22,21 @@ const Page = ({ data }) => {
         </div>
 
         <div class="container points">
-          <div class="col-md-3 col-lg-3">
             <SectionRow sectionPosts={sectionPosts} />
-          </div>
         </div>
         
-
         <FirstTestimonial testimonialPosts={testimonialPosts}/>
 
         <div id="feature2" class="profile">
           <Section sectionPosts={sectionPosts[2]} />
         </div> 
 
-        <div class="container points">
+        <div id="difference" class="container points">
           <Section sectionPosts={sectionPosts[1]} />
         </div>
 
         <div id="hc2" class="highlight-container">
           <div id="highlight2" class="container">
-
             <Testimonial 
               testimonialPosts={testimonialPosts[1]} 
             />
@@ -51,7 +47,7 @@ const Page = ({ data }) => {
           <Section sectionPosts={sectionPosts[7]} />
         </div> 
 
-        <div class="container points">
+        <div id="professional" class="container points">
           <Section sectionPosts={sectionPosts[0]} />
         </div>
         
@@ -94,7 +90,6 @@ query MyQuery {
     nodes{
       title
       subtitle
-      callToAction
       description {
         raw
       }

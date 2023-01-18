@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 
 const Section = ({ sectionPosts }) => { 
-      const { title, subtitle, image, description, callToAction } = sectionPosts;
+      const { title, subtitle, image, description } = sectionPosts;
       const photo = getImage(image) 
 
     return (
@@ -11,7 +11,7 @@ const Section = ({ sectionPosts }) => {
             {image && (
                 <GatsbyImage image={photo} />
             )}
-            <div class="container statement">
+            <div class="container section">
               <div>
                 <h2>{title}</h2>
                 {subtitle && (
@@ -20,12 +20,6 @@ const Section = ({ sectionPosts }) => {
                 <p>{renderRichText(description)}</p>
               </div>
             </div>
-
-
-
-            {callToAction && (
-                <p>{callToAction}</p>
-            )}
         </div>)
 
 }

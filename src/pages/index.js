@@ -17,9 +17,16 @@ const Page = ({ data }) => {
 
         <Header />
 
+      {sectionPosts.map(sec => {
+          if((sec.id) == "fd88a59d-0a83-543e-b15a-56db8451e4da" ){
+            return (
         <div id="feature1" class="profile">
-          <Section sectionPosts={sectionPosts[8]} />
+          <Section sectionPosts={sec} />
         </div>
+            )
+          }
+        })
+       }
 
         <div class="container points">
             <SectionRow sectionPosts={sectionPosts} />
@@ -27,9 +34,15 @@ const Page = ({ data }) => {
         
         <FirstTestimonial testimonialPosts={testimonialPosts}/>
 
+        {sectionPosts.map(sec => {
+          if((sec.id) == "e64c2c60-fce5-5838-a172-cd01af2283c6" ){
+            return (
         <div id="feature2" class="profile">
-          <Section sectionPosts={sectionPosts[2]} />
+          <Section sectionPosts={sec} />
         </div> 
+            ) 
+          }
+            })}
 
         <div id="difference" class="container points">
           <Section sectionPosts={sectionPosts[1]} />
@@ -37,15 +50,20 @@ const Page = ({ data }) => {
 
         <div id="hc2" class="highlight-container">
           <div id="highlight2" class="container">
-            <Testimonial 
+        <Testimonial 
               testimonialPosts={testimonialPosts[1]} 
             />
           </div>
         </div>
 
+        {sectionPosts.map(sec => {
+          if((sec.id) == "0c439502-9330-5cc7-8612-8fa15413ce7f" ){
+            return (
         <div id="feature3" class="profile">
-          <Section sectionPosts={sectionPosts[7]} />
+          <Section sectionPosts={sec} />
         </div> 
+            )
+          }})}
 
         <div id="professional" class="container points">
           <Section sectionPosts={sectionPosts[0]} />
@@ -90,6 +108,7 @@ query MyQuery {
     nodes{
       title
       subtitle
+      id
       description {
         raw
       }

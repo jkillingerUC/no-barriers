@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 const Testimonial = ({ testimonialPosts }) => {
     const { name, quote, image } = testimonialPosts;
     const photo = getImage(image)
-    console.log(testimonialPosts)
+    //console.log(testimonialPosts)
 
     return (
         <div>

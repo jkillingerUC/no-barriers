@@ -43,7 +43,6 @@ const Page = ({ data }) => {
           }
         })}
 
-
         {sectionPosts.map(sec => {
           if((sec.id) === "b7ced01a-f337-522a-ba85-dd88bde21eb1" ){
             return (
@@ -54,21 +53,17 @@ const Page = ({ data }) => {
           }
         })}
 
-
-
-
-
-
-
-
-
-        <div id="hc2" class="highlight-container">
-          <div id="highlight2" class="container">
-        <Testimonial 
-              testimonialPosts={testimonialPosts[1]} 
-            />
-          </div>
-        </div>
+        {testimonialPosts.map(tes => {
+          if((tes.id) === "b37513ba-3fd0-5f35-ba49-e5fbdcb4556d" ){
+            return (
+              <div id="hc2" class="highlight-container">
+                <div id="highlight2" class="container">
+                  <Testimonial testimonialPosts={tes} />
+                </div>
+              </div>
+            )
+          }
+        })}
 
         {sectionPosts.map(sec => {
           if((sec.id) === "0c439502-9330-5cc7-8612-8fa15413ce7f" ){
@@ -80,9 +75,6 @@ const Page = ({ data }) => {
           }
         })}
 
-
-
-
         {sectionPosts.map(sec => {
           if((sec.id) === "a97c2604-5ea8-5361-90fd-d1f3844c025a" ){
             return (
@@ -93,11 +85,6 @@ const Page = ({ data }) => {
           }
         })}
 
-
-
-
-        
-        
         {testimonialPosts.map(tes => {
           if((tes.id) === "b9c45db9-a37c-5dfb-b5f3-32508465e3a3" ){
             return (
@@ -110,14 +97,6 @@ const Page = ({ data }) => {
           }
         })}
 
-
-
-
-        <div id="hc3" class="highlight-container">
-          <div id="highlight3" class="container">
-            <Testimonial testimonialPosts={testimonialPosts[0]} />
-          </div>
-        </div> 
 
         <Footer />
 
@@ -132,16 +111,17 @@ query MyQuery {
 
   allContentfulNbTestimonial {
     nodes {
-    name
-    quote {
-      quote
       id
-    }
-    image {
-      gatsbyImageData
-      id
-      title
-    }
+      name
+      quote {
+        quote
+        id
+      }
+      image {
+        gatsbyImageData
+        id
+        title
+      }
   }
 }
  

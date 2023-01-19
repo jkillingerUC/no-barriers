@@ -20,11 +20,16 @@ const FirstTestimonial = ({testimonialPosts}) => {
       <div id="bar14" class="bar"> </div>
       <div id="bar15" class="bar"> </div>
       <div id="bar16" class="bar"> </div>
-      <div id="highlight1" class="container">
-        <Testimonial 
-          testimonialPosts={testimonialPosts[2]}
-        />
-      </div>
+
+      {testimonialPosts.map(tes => {
+        if((tes.id) === "f63462bd-cc62-5138-83ab-a4d3cc99fc85" ){
+          return (
+              <div id="highlight1" class="container">
+                <Testimonial testimonialPosts={tes} />
+              </div>
+          )
+        }
+      })}
   </div>
   )
 }
